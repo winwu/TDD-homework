@@ -18,3 +18,23 @@ c:\users\win.wu\documents\visual studio 2015\Projects\WebApplicationHomework\Web
 c:\users\win.wu\documents\visual studio 2015\Projects\WebApplicationHomework\WebApplicationHomework\obj\Debug\WebApplicationHomework.csprojResolveAssemblyReference.cache
 c:\users\win.wu\documents\visual studio 2015\Projects\WebApplicationHomework\WebApplicationHomework\obj\Debug\WebApplicationHomework.dll
 c:\users\win.wu\documents\visual studio 2015\Projects\WebApplicationHomework\WebApplicationHomework\obj\Debug\WebApplicationHomework.pdb
+Z:\project\my-homework\WebApplicationHomework\obj\Debug\WebApplicationHomework.csprojResolveAssemblyReference.cache
+Z:\project\my-homework\WebApplicationHomework\obj\Debug\WebApplicationHomework.dll
+Z:\project\my-homework\WebApplicationHomework\obj\Debug\WebApplicationHomework.pdb
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\csc.exe
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\System.Collections.Immutable.dll
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\System.Reflection.Metadata.dll
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\vbc.exe
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\VBCSCompiler.exe
+Z:\project\my-homework\WebApplicationHomework\bin\roslyn\VBCSCompiler.exe.config
+Z:\project\my-homework\WebApplicationHomework\bin\WebApplicationHomework.dll.config
+Z:\project\my-homework\WebApplicationHomework\bin\WebApplicationHomework.dll
+Z:\project\my-homework\WebApplicationHomework\bin\WebApplicationHomework.pdb
+Z:\project\my-homework\WebApplicationHomework\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\project\my-homework\WebApplicationHomework\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml

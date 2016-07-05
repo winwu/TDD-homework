@@ -16,38 +16,37 @@ namespace WebApplicationHomework
 
     public class ProductController
     {
-        private List<Product> _prods;
+        private IEnumerable<Product> _prods;
 
        public ProductController()
         {
             // constructor
-            this._prods = new List<Product> {};
+            // IEnumerable<Product> _prod = new List<Product>();
+            // this._prods = new List<Product>();
+            this._prods =  Enumerable.Empty<Product>();
+
         }
 
-        public ProductController(List<Product> product)
+        public ProductController(IEnumerable<Product> product)
         {
             this._prods = product;
         }
 
-        public List<int> GetProdByPageSizeAndColumnSum(int PageSize, String ColumnName)
+        public IEnumerable<int> GetProdByPageSizeAndColumnSum(int PageSize, String ColumnName)
         {
             // 回傳 example: 3筆一組 取 COST　的總和　會得到 6, 15, 24, 21
             List<int> resultCountArray = new List<int>();
-            Console.WriteLine("selected Column is : {0}", ColumnName);
 
-            // default result for each pagesize group
-            //  int groupCount = (int)Math.Ceiling( (decimal) (this._prods.Count / (double)PageSize));
-            // Console.WriteLine("groupCount is : {0}", groupCount);
+            Console.WriteLine("selected Column is : {0}", ColumnName);
 
             // 用來進行依據 pagesize 分組的 list
             var list = new List<List<Product>>();
-            for (int i = 0; i < this._prods.Count; i += PageSize)
-            {
-                // stackoverflow: split a list into smaller lists of n size
-                list.Add(this._prods.GetRange(i, Math.Min(PageSize, this._prods.Count - i)));
-            }
 
-            // stackoverflow: iterate multi dimensional array with nested foreach statement.
+            list = this._prods.Select((value, index) => new { Index = index, Value = value })
+                  .GroupBy(x => x.Index / PageSize)
+                  .Select(g => g.Select(x => x.Value).ToList())
+                  .ToList();
+
             foreach (var group in list)
             {
                 // 1. 每組總和的初始值, default 0
@@ -60,13 +59,16 @@ namespace WebApplicationHomework
                         tmpCounter += Convert.ToInt32(p.GetType().GetProperty(ColumnName).GetValue(p));
                     }
                 }
+
                 // 3. 並且將這組的總合放到結果的 lists
                 resultCountArray.Add(tmpCounter);
             }
 
             resultCountArray.ForEach(i => Console.Write("{0},\t", i));
 
-            return resultCountArray;
+            IEnumerable<int> enumResultCountArray2 = resultCountArray as IEnumerable<int>;
+     
+            return enumResultCountArray2;
         }
     }
 }

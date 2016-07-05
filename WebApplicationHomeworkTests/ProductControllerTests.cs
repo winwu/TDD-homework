@@ -39,7 +39,8 @@ namespace WebApplicationHomework.Tests
             var actual = target.GetProdByPageSizeAndColumnSum(3, "Cost");
 
             // assert
-            CollectionAssert.AreEqual(expected, actual);
+            // fix me : fluentAssertion
+            CollectionAssert.AreEqual(expected, actual.ToList());
         }
 
         [TestMethod()]
@@ -69,7 +70,7 @@ namespace WebApplicationHomework.Tests
             var actual = target.GetProdByPageSizeAndColumnSum(4, "Revenue");
 
             // assert
-            CollectionAssert.AreEqual(expected, actual);
+            CollectionAssert.AreEqual(expected, actual.ToList());
         }
     }
 }
