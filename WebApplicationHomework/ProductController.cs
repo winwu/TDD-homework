@@ -21,10 +21,7 @@ namespace WebApplicationHomework
        public ProductController()
         {
             // constructor
-            // IEnumerable<Product> _prod = new List<Product>();
-            // this._prods = new List<Product>();
             this._prods =  Enumerable.Empty<Product>();
-
         }
 
         public ProductController(IEnumerable<Product> product)
@@ -32,9 +29,10 @@ namespace WebApplicationHomework
             this._prods = product;
         }
 
-        public IEnumerable<int> GetProdByPageSizeAndColumnSum(int PageSize, String ColumnName)
+        public IEnumerable<int> GetProductByGroupSizeAndGetSumFromEachGroup(int PageSize, String ColumnName)
         {
             // 回傳 example: 3筆一組 取 COST　的總和　會得到 6, 15, 24, 21
+            // TODO: 思考如何改成 skip, take, sum 結合 Func.
             List<int> resultCountArray = new List<int>();
 
             Console.WriteLine("selected Column is : {0}", ColumnName);

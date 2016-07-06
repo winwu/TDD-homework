@@ -13,7 +13,7 @@ namespace WebApplicationHomework.Tests
     {
 
         [TestMethod()]
-        public void Test_Get_Prod_By_PageSize_3_And_Column_is_Cost_Sum()
+        public void Test_Get_Product_By_GroupSize_3_And_Get_Sum_From_Cost()
         {
             // arrange
             var tmpProduct = new List<Product>
@@ -36,15 +36,15 @@ namespace WebApplicationHomework.Tests
             var expected = new List<int> { 6, 15, 24, 21 };
 
             // act
-            var actual = target.GetProdByPageSizeAndColumnSum(3, "Cost");
+            var actual = target.GetProductByGroupSizeAndGetSumFromEachGroup(3, "Cost");
 
             // assert
-            // fix me : fluentAssertion
+            // Hint : maybe use fluentAssertion ?!
             CollectionAssert.AreEqual(expected, actual.ToList());
         }
 
         [TestMethod()]
-        public void Test_Get_Prod_By_PageSize_4_And_Column_is_Revenue_Sum()
+        public void Test_Get_Product_By_GroupSize_4_And_Get_Sum_From_Revenue()
         {
             // arrange
             var tmpProduct = new List<Product>
@@ -67,7 +67,7 @@ namespace WebApplicationHomework.Tests
             var expected = new List<int> { 50, 66, 60 };
 
             // act
-            var actual = target.GetProdByPageSizeAndColumnSum(4, "Revenue");
+            var actual = target.GetProductByGroupSizeAndGetSumFromEachGroup(4, "Revenue");
 
             // assert
             CollectionAssert.AreEqual(expected, actual.ToList());
